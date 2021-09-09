@@ -15,7 +15,7 @@ export default class Paddle {
     }
     //movimiento
     down() { 
-        if(this.y < 400){
+        if(this.y < 500){
             this.y = this.y + this.speed;
         }   
     };

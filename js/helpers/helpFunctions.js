@@ -5,7 +5,7 @@ export function draw (context, element){
             break;
         case 'circle':
             context.beginPath();
-            context.arc(element.x, element.y, element.radius, 0, 7);
+            context.arc(element.x, element.y, element.radius, 0, 8);
             context.fill();
             context.closePath(); 
             break;

@@ -19,15 +19,26 @@ export default class BoardView {
         }
     }
 // limpiar tablero
-    clear(){
+    clean(){
         this.ctx.clearRect(0, 0, this.board.width, this.board.height);
     }
+
+    check_collision (){
+        
+        let size2 = this.board.paddles.length;
+        for (let i = 0; i < size2; i++){
+            let paddle = this.board.paddles[i];
+            if(hit(paddle, this.board.ball)){            
+                this.board.ball.collision(paddle);
+            }
+        }
+    }
     play () {
-        if (this.board.arePlaying == true){
+        if (this.board.playing == true){
             this.clean();
             this.drawing();
-            /* this.check_collition();
-            this.board.ball.move(); */
+            this.check_collision();
+            this.board.ball.move();
         }     
     }
 }
