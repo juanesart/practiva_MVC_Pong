@@ -1,21 +1,8 @@
-const main = () =>{
-    self.Table = function(width, height){
-        this.width = width;
-        this.height = height;
-        this.playing = false;
-        this.game_over = false;
-        this.bars = [];
-        this.ball = null;
-    }
-
-    self.Table.prototype = {
-        get elements(){
-            let elements = this.bars;
-            elements.push(ball);
-            return elements;
-        }
-    }
-}
+let board = new Board(700, 500);
+let paddle = new Paddle();
+let paddle2= new Paddle();
+const table = document.getElementById('table');
+let board_view = new BoardView(canvas, board);
 
 
 /* const table = document.getElementById('table');

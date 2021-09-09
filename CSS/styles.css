@@ -3,10 +3,12 @@ body{
 }
 
 #table{
-    display:flex;
+    display:block;
+    position: absolute;
     background-color: azure;
-    width: 80%;
-    height: 40rem;
-    justify-content: center;
-    align-items: center;
+    margin: auto;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
 }
