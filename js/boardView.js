@@ -1,3 +1,6 @@
+import Board from "./board.js";
+import {draw, hit} from "./helpers/helpFunctions.js";
+
 export default class BoardView {
 // contructor de clase
     constructor(table, board) {
@@ -9,9 +12,9 @@ export default class BoardView {
     }
 // manda  a dibujar elemento por elemento
     drawing(){
-        let size = this.board.elements().length;
+        let size = this.board.elements.length;
         for (let i = 0; i < size; i++){
-            let elementToDraw = this.board.elements()[i];
+            let elementToDraw = this.board.elements[i];
             draw(this.ctx, elementToDraw);
         }
     }
